@@ -85,9 +85,11 @@ sudo apt-get install lxappearance -y
 gsettings set com.canonical.desktop.interface scrollbar-mode normal
 
 # Install Docker
+sudo apt-get install python-pip -y
 sudo apt-get install docker.io -y
 sudo ln -sf /usr/bin/docker.io /usr/local/bin/docker
 sudo sed -i '$acomplete -F _docker docker' /etc/bash_completion.d/docker.io
+sudo pip install -U fig
 
 echo
 echo Additional steps:
