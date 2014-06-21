@@ -90,6 +90,10 @@ sudo apt-get install docker.io -y
 sudo ln -sf /usr/bin/docker.io /usr/local/bin/docker
 sudo sed -i '$acomplete -F _docker docker' /etc/bash_completion.d/docker.io
 sudo pip install -U fig
+sudo groupadd docker
+sudo gpasswd -a ${USERNAME} docker
+sudo chmod o+rw /var/run/docker.sock
+sudo service docker.io restart
 
 echo
 echo Additional steps:
