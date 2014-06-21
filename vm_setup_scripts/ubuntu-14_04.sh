@@ -78,7 +78,11 @@ git clone git://github.com/erikw/tmux-powerline.git
 mv tmux-powerline .tmux-powerline
 
 # Setup Window Manager
-sudo apt-get install i3-wm -y
+sudo apt-get install i3 -y
+sudo apt-get install lxappearance -y
+
+# Always show scrollbars
+gsettings set com.canonical.desktop.interface scrollbar-mode normal
 
 echo
 echo Additional steps:
@@ -86,4 +90,6 @@ echo - Change font to "Ubuntu Mono Powerline"
 echo - Under "Profile > Title and Command" set "Command"
 echo   to "Run a custom command instead of my shell": `/usr/local/bin/zsh`
 echo - Customize `.tmux-powerline/themes/default.sh`
+echo - Install Google Chrome
+echo - Setup Theme using `lxappearance`
 echo - Reboot your computer: `sudo reboot`
