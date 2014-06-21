@@ -84,6 +84,11 @@ sudo apt-get install lxappearance -y
 # Always show scrollbars
 gsettings set com.canonical.desktop.interface scrollbar-mode normal
 
+# Install Docker
+sudo apt-get install docker.io -y
+sudo ln -sf /usr/bin/docker.io /usr/local/bin/docker
+sudo sed -i '$acomplete -F _docker docker' /etc/bash_completion.d/docker.io
+
 echo
 echo Additional steps:
 echo - Change font to "Ubuntu Mono Powerline"
