@@ -21,7 +21,6 @@ sudo apt-get install git -y
 sudo apt-get install tmux -y
 sudo apt-get install autossh -y
 sudo apt-get install silversearcher-ag -y
-sudo apt-get install autojump -y
 
 # Install Terminal Programs
 sudo apt-get install highlight atool xpdf mediainfo -y
@@ -94,6 +93,15 @@ sudo groupadd docker
 sudo gpasswd -a ${USERNAME} docker
 sudo chmod o+rw /var/run/docker.sock
 sudo service docker.io restart
+
+# Install FASD
+cd ~
+wget https://github.com/clvv/fasd/tarball/1.0.1
+tar -xvzf 1.0.1
+cd clvv-fasd-4822024
+sudo make install
+cd ~
+rm -rf 1.0.1 clvv-fasd-4822024
 
 echo
 echo Additional steps:
