@@ -65,6 +65,9 @@ git checkout .
 sudo apt-get install vim-gtk ruby-dev rake -y
 curl -Lo- https://bit.ly/janus-bootstrap | bash
 
+# Setup Syntastic
+sudo pip install flake8
+
 # Powerline for Vim Ubuntu
 cd ~
 git clone https://github.com/pdf/ubuntu-mono-powerline-ttf.git ~/.fonts/ubuntu-mono-powerline-ttf
@@ -80,8 +83,9 @@ mv tmux-powerline .tmux-powerline
 sudo apt-get install i3 -y
 sudo apt-get install lxappearance -y
 
-# Always show scrollbars
+# Settings for gnome session with i3
 gsettings set com.canonical.desktop.interface scrollbar-mode normal
+gsettings set org.gnome.desktop.background show-desktop-icons false
 
 # Install Docker
 sudo apt-get install python-pip -y
