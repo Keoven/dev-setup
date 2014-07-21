@@ -68,13 +68,14 @@ curl -Lo- https://bit.ly/janus-bootstrap | bash
 # Setup Syntastic
 sudo pip install flake8
 
-# Powerline for Vim Ubuntu
+# Powerline for Vim Ubuntu and additional vim plugins
 cd ~
 git clone https://github.com/pdf/ubuntu-mono-powerline-ttf.git ~/.fonts/ubuntu-mono-powerline-ttf
 fc-cache -vf
 mkdir .janus
 cd .janus
 git clone git://github.com/Lokaltog/vim-powerline.git
+git clone git@github.com:editorconfig/editorconfig-vim.git
 cd ~
 git clone git://github.com/erikw/tmux-powerline.git
 mv tmux-powerline .tmux-powerline
